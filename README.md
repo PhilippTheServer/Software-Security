@@ -1,29 +1,55 @@
-# Sofware Security
+# Software Security
 
 ## Assignments
 
-The assignments work as a kind of small CTF challenges. Therefore go visit [scoreboard.softsec.rub.de](scoreboard.softsec.rub.de). There you can login and find the currently available "assignements"
-There are different kind of assignments. Normal ones and *checkpoint tasks*. Last ones are more complex and will be used to grade the student during the semester before the exam. 
+The assignments work as small CTF challenges. Visit [scoreboard.softsec.rub.de](http://scoreboard.softsec.rub.de) to log in and find the currently available assignments.
+
+There are two types of assignments:
+- **Regular assignments**: Standard challenges
+- **Checkpoint tasks**: More complex challenges used for grading throughout the semester before the exam
 
 ## Checkpoint Tasks
 
-Those will need some programming (maybe revers engineering) to solve. The code for those need to be submitted. The code itself needs to be well documentated and straight forward. On the submit window is a select menu to put in the code and a text explanaiton on how the tasks got solved. Both will be used together with the correct flag to grad the student.
+These tasks require programming and potentially reverse engineering to solve. You must submit your code along with the solution.
+
+**Submission requirements:**
+- Well-documented code
+- Clear and straightforward implementation
+- Text explanation of your approach
+- Correct flag
+
+All components (code, explanation, and flag) will be considered for grading.
 
 ---
 
-# Process
+## Workflow
 
-First download the demo file from the scoreboard and setup the container. Find out how to get the flag by scripting a solution. After that request a real instance and try your solution. Then submit the flag and a text on how you did it and your code.
+1. Download the demo file from the scoreboard
+2. Set up the Docker container
+3. Analyze and script a solution to capture the flag
+4. Request a real instance and test your solution
+5. Submit the flag, your code, and a written explanation
 
-Usefull commands:
+## Useful Commands
 
+**Connect to the running Docker container:**
 ```bash
 nc 127.0.0.1 1024
 ```
-Connect to the running docker container.
 
-```
+**Build the Docker container:**
+```bash
 docker build -t quiz .
 ```
-to build the docker container. Either ways you could also just run in it. It will build on itself.
 
+**Run the container directly:**
+```bash
+docker run -p 1024:1024 quiz
+```
+*Note: Running will automatically build the container if needed.*
+
+---
+
+# Use full stuff
+
+The setup lecture mentioned a python library `pwntools`. Maybe have a look into it later.
